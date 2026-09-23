@@ -1,8 +1,21 @@
 #include <stdlib.h> // For NULL
 
 /**
- * TODO: Complete and document
+ * Adds all positive numbers in an array.
  */
 int add_all_pos(int* array, int alen) {
-    return 1;
+    
+    if (array == NULL) {
+        return 0;
+    }
+
+    int total = 0;
+
+    for (int i = 0; i < alen; i++) {
+        if (array[i] > 0) {
+            total = total + array[i];
+        }
+    }
+
+    return total;
 }
